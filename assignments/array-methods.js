@@ -103,13 +103,41 @@ console.log(ticketPriceTotal);
 // Problem 1
 // Longest name has to run with shoelaces tied together - reduce
 
-//Declare longest runner name here (object)
+
 //Iterate through runners' names (set threshold of name > 9 characeters)
 //If iterated name is > current name legnth, set value
-//Return longest runner name
+//Return longest runners' name
+
+let unluckyPeople = [];
+
+unluckyPeople = runners.filter(function(runner){
+  
+  return runner.first_name.length > 8;
+  
+});
+
+console.log(unluckyPeople);
+
 
 // Problem 2
 // Compile email list (form, newsletter, etc) - foreach
 
+let emailList = [];
+
+runners.forEach(function(runner) {
+  
+  emailList.push(runner.email);
+  
+});
+
+console.log(emailList);
+
 // Problem 3
 // Add comapny name to person's title(?) - map
+
+let bib = [];
+
+bib = runners.map(runner => `${runner.first_name} ${runner.last_name} ${runner.company_name}`);
+
+console.log(bib);
+
